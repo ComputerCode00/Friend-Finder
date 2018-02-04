@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Survey</title>
+
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+	
+	<script src="https://code.jquery.com/jquery.js"></script>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.jquery.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+
+</head>
+<body style="background-color: maroon;">
+
+	<div class = "container">
+		<form role = "form" id = "survey">
+			<h1>Take the Survey</h1>
+			<hr>
+			<h2>Who are you?</h2>
+			<div class = "form-group">
+				<h3>Name: (required)</h3>
+				<input type="text" class="form-control" id="name">
+			</div>
+
+			<h3>Link to photo image (required)</h3>
+			<input type="text" name="" id="photo" class="form-control" required >
+	</div>
+	<hr>
+	<hr>
+
+	<div class = "container" id = "survey">
+		
+		<h2>How strongly do you agree on the following:</h2>
+
+		<h3>Question 1</h3>
+		<h4>Coding is very challenging.</h4>
+		<select class = "form-control" id = "Q1">
+			<option>1 (Strongly Disagree)</option>
+			<option>2</option>
+			<option>3</option>
+			<option>4</option>
+			<option>5 (Strongly Agree)</option>
+		</select>
+
+		<h3>Question 2</h3>
+		<h4>Pizza tastes better with pineapple.</h4>
+		<select class = "form-control" id = "Q2">
+			<option>1 (Strongly Disagree)</option>
+			<option>2</option>
+			<option>3</option>
+			<option>4</option>
+			<option>5 (Strongly Agree)</option>
+		</select>
+
+		<h3>Question 3</h3>
+		<h4>I can finish a 5K in under an hour.</h4>
+		<select class = "form-control" id = "Q3">
+			<option>1 (Strongly Disagree)</option>
+			<option>2</option>
+			<option>3</option>
+			<option>4</option>
+			<option>5 (Strongly Agree)</option>
+		</select>
+
+		<h3>Question 4</h3>
+		<h4>Marvel is better than DC.</h4>
+		<select class = "form-control" id = "Q4">
+			<option>1 (Strongly Disagree)</option>
+			<option>2</option>
+			<option>3</option>
+			<option>4</option>
+			<option>5 (Strongly Agree)</option>
+		</select>
+
+		<h3>Question 5</h3>
+		<h4>People get more angry during traffic.</h4>
+		<select class = "form-control" id = "Q5">
+			<option>1 (Strongly Disagree)</option>
+			<option>2</option>
+			<option>3</option>
+			<option>4</option>
+			<option>5 (Strongly Agree)</option>
+		</select>
+
+		<h3>Question 6</h3>
+		<h4>Foo Fighters is one of the greatest rock band of all time.</h4>
+		<select class = "form-control" id = "Q6">
+			<option>1 (Strongly Disagree)</option>
+			<option>2</option>
+			<option>3</option>
+			<option>4</option>
+			<option>5 (Strongly Agree)</option>
+		</select>
+
+		<h3>Question 7</h3>
+		<h4>NY is the best city on Earth.</h4>
+		<select class = "form-control" id = "Q7">
+			<option>1 (Strongly Disagree)</option>
+			<option>2</option>
+			<option>3</option>
+			<option>4</option>
+			<option>5 (Strongly Agree)</option>
+		</select>
+
+		<h3>Question 8</h3>
+		<h4>I am happy when I am unhappy.</h4>
+		<select class = "form-control" id = "Q8">
+			<option>1 (Strongly Disagree)</option>
+			<option>2</option>
+			<option>3</option>
+			<option>4</option>
+			<option>5 (Strongly Agree)</option>
+		</select>
+
+		<h3>Question 9</h3>
+		<h4>If you belive in something you will achieve it.</h4>
+		<select class = "form-control" id = "Q9">
+			<option>1 (Strongly Disagree)</option>
+			<option>2</option>
+			<option>3</option>
+			<option>4</option>
+			<option>5 (Strongly Agree)</option>
+		</select>
+
+		<h3>Question 10</h3>
+		<h4>I prefer the country than the city.</h4>
+		<select class = "form-control" id = "Q10">
+			<option>1 (Strongly Disagree)</option>
+			<option>2</option>
+			<option>3</option>
+			<option>4</option>
+			<option>5 (Strongly Agree)</option>
+		</select>
+		
+		<br>
+		<br>
+
+		<button type="button" class="btn btn-success btn-block" id="submit">Submit</button>
+		<br>
+
+
+
+		<div id = "resultModal" class="modal fade" role="dialog">
+			<div class = "modal-dialog">
+				<div class="modal-content" style="background-color: blue;">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+							<h4 class="modal-title">Guess Who!!!</h4>
+					</div>			  
+						<div class="modal-body">
+							<h2 id = "matchName"></h2>
+							<img id = "matchImage" src="">
+						</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+  <h2>Modal Example</h2>
+  <button id="modal" class="modal fade">Open Modal</button>
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Modal Header</h4>
+        </div>
+        <div class="modal-body">
+          <p>Some text in the modal.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+	</div>
+
+<script type="text/javascript">
+	$(document).ready(function() {
+		// $('#submit').on('click', function() {
+		// 	console.log("clicked");
+		// 	if($("#name").val().trim() === '') {
+		// 		alert('Please Enter Name...');
+		// 	}
+		
+		// 	$.post("/api/friends", userData, function(data) {
+		// 		$("#matchName").text(data.name);
+		// 		$("#matchImage").attr("scr", data.picture);
+		// 		$("#")
+		// 	})
+
+		// gathering info of user
+		$("#submit").on('click', function() {
+			event.preventDefault();
+			var newFriend = {
+				name: $("#name").val().trim(),
+				photo:$("#photo").val().trim(),
+				scores:[
+						$("#Q1").val().trim(),
+						$("#Q2").val().trim(),
+						$("#Q3").val().trim(),
+						$("#Q4").val().trim(),
+						$("#Q5").val().trim(),
+						$("#Q6").val().trim(),
+						$("#Q7").val().trim(),
+						$("#Q8").val().trim(),
+						$("#Q9").val().trim(),
+						$("#Q10").val().trim()
+					]
+				};
+
+				alert("Searching for new friend...");
+				$.post("/api/friends", newFriend)
+					.done(function(data) {
+						console.log(data);
+							// reference with api homework and omd hw
+					});
+					$('#name').html(data.matchName);
+					$('#')
+			})
+		});
+</script>
+
+<style type="text/css">
+	h1 {color: lightgreen; text-align: center; font-size: 40px;}
+	h2 {color: blue; text-align: center;}
+	h3 {color: orange;}
+	h4 {color: lightblue;}
+</style>
+
+</body>
+</html>
